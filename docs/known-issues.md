@@ -6,7 +6,7 @@
 |------|------|
 | MCP stdio | Content-Length 帧 + NDJSON 回退；`env` 字段 |
 | 语义检索 | Chroma `nexus vector-index` + `semantic_search` 工具 |
-| 多模态 | `[#image:]` → base64 → OpenAI / Anthropic vision blocks |
+| 多模态 | `[#image:]` → base64 → 视觉模型输入块 |
 | JSON Schema | 引擎 `jsonschema` + CLI `--json-schema` |
 | Shell 沙箱 | 规则拦截 + **Docker 可选**（`NEXUS_SANDBOX=docker`） |
 | 协作 | `/sync` 快照 + **WebSocket** `/v1/collab/ws` |

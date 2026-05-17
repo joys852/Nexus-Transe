@@ -116,7 +116,7 @@ cargo run -p nexus-cli -- chat
 
 ## 项目配置 PROJECT.md
 
-在项目根目录创建 `PROJECT.md`（或 `CLAUDE.md`），内容会注入 AI 系统提示。
+在项目根目录创建 `PROJECT.md`（或 `NEXUS.md`），内容会注入系统提示。
 
 ```powershell
 nexus init

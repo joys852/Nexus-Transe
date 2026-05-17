@@ -4,7 +4,7 @@
 
 - [x] CLI 交互式会话 + 流式输出
 - [x] 工具：读写编辑、Shell、Git
-- [x] 多模型（OpenAI 兼容 API）
+- [x] 多模型（Chat Completions 兼容 API）
 - [x] 加密密钥存储、MCP/插件架构骨架
 - [x] CLI 终端主题与工作流斜杠命令
 - [ ] MCP stdio 全双工传输（Beta 完成）

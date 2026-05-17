@@ -46,7 +46,7 @@ git push origin v1.0.0
 
 ![Logo](../assets/logo.png)
 
-**Cybertron Nexus Command Interface** — AI 终端 CLI。
+**Cybertron Nexus Command Interface** — 终端指挥 CLI。
 
 ### 安装
 

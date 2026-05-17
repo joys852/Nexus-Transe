@@ -86,7 +86,7 @@ pub fn run_import(config: &NexusConfig, from: Option<PathBuf>) -> anyhow::Result
 
     } else if let Some(p) = cc_switch_claude_settings_path() {
 
-        ui::print_info(format!("Claude settings: {}", p.display()));
+        ui::print_info(format!("external settings: {}", p.display()));
 
         p
 

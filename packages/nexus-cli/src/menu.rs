@@ -1,4 +1,4 @@
-//! Arrow-key selection menus (Claude Code–style confirmations).
+//! Arrow-key selection menus for confirmations.
 
 use std::io::{self, Write};
 

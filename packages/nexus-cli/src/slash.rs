@@ -15,7 +15,7 @@ pub const COMMANDS: &[SlashCommand] = &[
     SlashCommand {
         name: "/init",
         args: "",
-        summary: "create CLAUDE.md / PROJECT.md / NEXUS.md",
+        summary: "create PROJECT.md / NEXUS.md",
     },
     SlashCommand {
         name: "/docs",
@@ -100,7 +100,7 @@ pub const COMMANDS: &[SlashCommand] = &[
     SlashCommand {
         name: "/approvals",
         args: " [suggest|auto-edit|full-auto]",
-        summary: "tool approval mode (Codex-style)",
+        summary: "tool approval mode (suggest / auto-edit / full-auto)",
     },
     SlashCommand {
         name: "/context",
@@ -195,7 +195,7 @@ pub const COMMANDS: &[SlashCommand] = &[
     SlashCommand {
         name: "/skills",
         args: " sync",
-        summary: "import skills from ~/.cursor, ~/.claude, ~/.codex",
+        summary: "import skills from external skill directories",
     },
     SlashCommand {
         name: "/skills",

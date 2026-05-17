@@ -1,4 +1,4 @@
-//! Discover skills from Claude Code / Cursor / Codex-style directories.
+//! Discover skills from external agent skill directories.
 
 use std::fs;
 use std::path::{Path, PathBuf};

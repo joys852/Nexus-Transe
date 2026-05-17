@@ -1,4 +1,4 @@
-//! Fuzzy `@path` resolution (Codex-style file references).
+//! Fuzzy `@path` resolution for file references.
 
 use std::path::{Path, PathBuf};
 use std::sync::{Mutex, OnceLock};

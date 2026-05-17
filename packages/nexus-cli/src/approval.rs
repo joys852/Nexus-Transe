@@ -1,4 +1,4 @@
-//! Tool approval modes — Codex-style Suggest / AutoEdit / FullAuto.
+//! Tool approval modes — Suggest / AutoEdit / FullAuto.
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum ApprovalMode {

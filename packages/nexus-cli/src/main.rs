@@ -48,7 +48,7 @@ use uuid::Uuid;
 #[command(
     name = "nexus",
     version,
-    about = "Nexus-Transe — Cybertron AI terminal CLI",
+    about = "Nexus-Transe — Cybertron terminal command interface",
     after_help = "Quick start: nexus   (or nx) — opens chat REPL in current directory"
 )]
 struct Cli {
@@ -63,7 +63,7 @@ enum Commands {
     Chat {
         #[arg(short, long)]
         model: Option<String>,
-        /// One-shot prompt (like `claude -p` / `codex exec`); use `-` for stdin
+        /// One-shot prompt; use `-` for stdin
         #[arg(short = 'p', long)]
         prompt: Option<String>,
         /// Auto-approve tools for one-shot runs
@@ -145,7 +145,7 @@ enum ProviderAction {
     List,
     /// Switch active provider
     Use { id: String },
-    /// Import from CC Switch / Claude settings.json
+    /// Import from CC Switch / external settings.json
     ImportCcSwitch {
         #[arg(long, short)]
         from: Option<std::path::PathBuf>,

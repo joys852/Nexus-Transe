@@ -1,4 +1,4 @@
-//! Per-turn timing and a single updating activity line (Cursor / Claude Code style).
+//! Per-turn timing and a single updating activity line.
 
 use std::io::Write;
 use std::sync::Mutex;

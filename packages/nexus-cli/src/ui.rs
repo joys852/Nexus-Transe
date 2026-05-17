@@ -1,4 +1,4 @@
-//! Terminal presentation — Claude Code–inspired boxed layout for Nexus CLI.
+//! Terminal presentation — boxed layout for Nexus-Transe CLI.
 
 use colored::Colorize;
 use std::path::{Path, PathBuf};

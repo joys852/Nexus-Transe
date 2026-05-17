@@ -1,4 +1,4 @@
-//! Load instruction markdown files (Claude Code–compatible + Nexus).
+//! Load instruction markdown files (PROJECT.md, NEXUS.md, and common aliases).
 
 use std::path::{Path, PathBuf};
 

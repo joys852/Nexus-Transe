@@ -23,7 +23,7 @@ pub fn expand_message(line: &str, project_root: &Path) -> String {
     expand_at_files(&with_images, project_root)
 }
 
-/// Codex-style `@filename` — inline file excerpt into the user message.
+/// `@filename` — inline file excerpt into the user message.
 fn expand_at_files(text: &str, project_root: &Path) -> String {
     let mut rebuilt = String::new();
     for (i, token) in text.split_whitespace().enumerate() {

@@ -18,8 +18,8 @@ pub enum ApiProtocol {
 impl ApiProtocol {
     pub fn label_zh(&self) -> &'static str {
         match self {
-            Self::AnthropicMessages => "Anthropic Messages (原生)",
-            Self::OpenAiChatCompletions => "OpenAI Chat Completions (中转/代理)",
+            Self::AnthropicMessages => "Messages API（原生）",
+            Self::OpenAiChatCompletions => "Chat Completions（中转/代理）",
         }
     }
 }
@@ -194,9 +194,9 @@ fn import_claude_settings(path: &Path) -> Result<ProvidersConfig> {
     providers.push(ProviderProfile {
         id: "cc-switch-claude".into(),
         name: if is_relay {
-            "CC Switch / Claude (中转)".into()
+            "CC Switch / 外部配置 (中转)".into()
         } else {
-            "Anthropic Messages (原生)".into()
+            "Messages API（原生）".into()
         },
         protocol: ApiProtocol::AnthropicMessages,
         base_url: base_url.trim_end_matches('/').to_string(),
@@ -362,7 +362,7 @@ pub fn default_providers() -> ProvidersConfig {
         providers: vec![
             ProviderProfile {
                 id: "anthropic-official".into(),
-                name: "Anthropic Messages (原生)".into(),
+                name: "Messages API（原生）".into(),
                 protocol: ApiProtocol::AnthropicMessages,
                 base_url: "https://api.anthropic.com".into(),
                 model: "claude-sonnet-4-20250514".into(),
@@ -376,7 +376,7 @@ pub fn default_providers() -> ProvidersConfig {
             },
             ProviderProfile {
                 id: "openai-official".into(),
-                name: "OpenAI Chat Completions (官方)".into(),
+                name: "Chat Completions（官方）".into(),
                 protocol: ApiProtocol::OpenAiChatCompletions,
                 base_url: "https://api.openai.com/v1".into(),
                 model: "gpt-4o-mini".into(),
@@ -390,7 +390,7 @@ pub fn default_providers() -> ProvidersConfig {
             },
             ProviderProfile {
                 id: "openai-relay-template".into(),
-                name: "OpenAI Chat Completions (三方中转 — 需配置)".into(),
+                name: "Chat Completions（三方中转 — 需配置）".into(),
                 protocol: ApiProtocol::OpenAiChatCompletions,
                 base_url: "https://your-relay.example.com/v1".into(),
                 model: "gpt-4o".into(),

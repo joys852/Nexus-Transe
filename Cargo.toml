@@ -13,7 +13,7 @@ license = "Apache-2.0"
 authors = ["joys852"]
 repository = "https://github.com/joys852/Nexus-Transe"
 homepage = "https://github.com/joys852/Nexus-Transe"
-description = "Nexus-Transe — Cybertron AI terminal CLI"
+description = "Nexus-Transe — Cybertron terminal command interface"
 
 [workspace.dependencies]
 anyhow = "1"

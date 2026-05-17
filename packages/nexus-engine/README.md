@@ -1,6 +1,6 @@
 # nexus-engine
 
-NexusIDE 智能体引擎：LangGraph 编排、多模型路由（Anthropic 原生 / OpenAI 兼容中转）、SSE 聊天 API。
+Nexus-Transe 智能体引擎：工作流编排、多协议模型路由、SSE 对话 API。
 
 ## 运行
 

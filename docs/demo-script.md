@@ -1,9 +1,9 @@
-# NexusIDE MVP 演示视频脚本（约 8 分钟）
+# Nexus-Transe MVP 演示视频脚本（约 8 分钟）
 
 ## 1. 开场（30s）
 
-- 展示 NexusIDE 架构图：CLI + 共享 Rust 核心 + Python 引擎
-- 说明：类 Claude Code，本地优先、可审批工具调用
+- 展示 Nexus-Transe 架构图：CLI + 共享 Rust 核心 + Python 引擎
+- 说明：本地优先、可审批工具调用的终端工作流
 
 ## 2. 环境启动（45s）
 
@@ -34,7 +34,7 @@ nexus run "运行 git status 并总结变更" -y
 
 ## 6. 安全与多模型（45s）
 
-- 展示 `OPENAI_API_KEY` / `NEXUS_API_BASE` 切换 DeepSeek 或 Ollama
+- 展示 API 密钥与 `NEXUS_API_BASE` 切换不同推理端点
 - `nexus provider list` / `nexus provider use …`
 - 强调写操作需审批
 

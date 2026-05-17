@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>AI 终端 CLI</strong> — 类 Claude Code 的本地开发助手<br/>
+  <strong>终端指挥 CLI</strong> — 本地优先的开发工作流助手<br/>
   <a href="https://github.com/joys852/Nexus-Transe">github.com/joys852/Nexus-Transe</a>
 </p>
 
@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg" alt="Platform" />
 </p>
 
-**Nexus-Transe**（赛博坦 Nexus 指挥界面）是面向开发者的 **纯终端 AI CLI**：Rust 核心 + Python LangGraph 引擎，支持工具调用、MCP、多智能体流水线与会话持久化。
+**Nexus-Transe**（赛博坦 Nexus 指挥界面）是面向开发者的 **纯终端智能体 CLI**：Rust 核心 + Python 编排引擎，支持工具调用、MCP、多智能体流水线与会话持久化。
 
 ## 架构
 
@@ -27,7 +27,7 @@ nexus / nx (Rust CLI) ── nexus-core ── HTTP ── nexus-engine (Python)
 |------|------|
 | `packages/nexus-cli` | 交互 REPL、`nexus` / `nx` 二进制 |
 | `packages/nexus-core` | SQLite、工具沙箱、提供商配置 |
-| `packages/nexus-engine` | LLM、SSE、MCP、向量检索 |
+| `packages/nexus-engine` | 模型推理、SSE、MCP、向量检索 |
 
 ## 快速开始
 

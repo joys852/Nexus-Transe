@@ -1,6 +1,6 @@
 # NexusIDE — AI 驱动开发系统架构
 
-> 类 Claude Code 的统一智能体开发平台：**CLI + 共享引擎**（本地优先）
+> 统一智能体开发平台：**CLI + 共享引擎**（本地优先）
 
 ## 1. 系统总览
 
@@ -158,7 +158,7 @@ flowchart LR
 ### Phase 1 — MVP（8–10 周）
 
 - [ ] `nexus-core`：配置、SQLite 迁移、基础工具（read/write/glob）
-- [ ] Agent Engine：单 Agent ReAct + OpenAI/Anthropic 适配
+- [ ] Agent Engine：单 Agent ReAct + 多协议模型适配
 - [ ] CLI：`nexus chat`、`nexus run`、流式 TUI
 - [ ] 同步：会话与事件（本地）
 
@@ -168,7 +168,7 @@ flowchart LR
 - [ ] Tree-sitter 索引 + Chroma 检索
 - [ ] Git 工具、Shell 审批流、审计日志
 - [ ] MCP 插件加载
-- [ ] 多模型：DeepSeek、Ollama、OpenAI 兼容中转
+- [ ] 多模型：本地推理端点、Chat Completions 兼容中转
 
 ### Phase 3 — 正式版（持续）
 

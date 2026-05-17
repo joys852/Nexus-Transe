@@ -55,7 +55,7 @@ nexus vector-index                # Chroma 语义索引
 
 ## 多模态
 
-`[#image:path.png]` — 小图（<400KB）转 base64，引擎侧转 OpenAI vision 格式（需模型支持）。
+`[#image:path.png]` — 小图（<400KB）转 base64，引擎侧转视觉模型输入格式（需模型支持）。
 
 ## 协作
 

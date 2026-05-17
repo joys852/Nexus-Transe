@@ -291,7 +291,7 @@ impl ReplSession {
     }
 
     fn cmd_init(&mut self) -> anyhow::Result<()> {
-        const TEMPLATE: &str = "# Project instructions for Nexus / Claude Code\n\n\
+        const TEMPLATE: &str = "# Project instructions for Nexus-Transe\n\n\
             Describe your project, conventions, and how the AI should help.\n\n\
             ## Goals\n\n\
             ## Commands\n\n\

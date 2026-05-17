@@ -1,4 +1,4 @@
-//! PreToolUse hooks — `.nexus/hooks.toml` (Claude Code–style policy gates).
+//! PreToolUse hooks — `.nexus/hooks.toml` policy gates.
 
 use serde::Deserialize;
 use std::path::{Path, PathBuf};
@@ -128,7 +128,7 @@ fn run_hook_command(
 }
 
 pub fn example_hooks_toml() -> &'static str {
-    r#"# NexusIDE PreToolUse hooks (Claude Code–style)
+    r#"# Nexus-Transe PreToolUse hooks
 [[pre_tool_use]]
 tools = ["run_shell"]
 action = "deny"

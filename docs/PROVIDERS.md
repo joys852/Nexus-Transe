@@ -1,11 +1,11 @@
 # 模型提供商与三方中转 / CC Switch
 
-NexusIDE 支持两种 API 协议（与 CC Switch 下拉选项一致）：
+Nexus-Transe 支持两种 API 协议（与 CC Switch 下拉选项一致）：
 
 | 协议 | `protocol` 值 | 适用场景 |
 |------|----------------|----------|
-| **Anthropic Messages (原生)** | `anthropic_messages` | 官方 Anthropic、支持 `/v1/messages` 的中转 |
-| **OpenAI Chat Completions (中转)** | `openai_chat_completions` | 多数三方中转站、DeepSeek、Ollama |
+| **Messages API（原生）** | `anthropic_messages` | 支持 `/v1/messages` 的官方或中转 |
+| **Chat Completions（兼容）** | `openai_chat_completions` | 多数三方中转站、本地推理端点 |
 
 ## 配置文件
 
@@ -38,7 +38,7 @@ nexus provider list
 # 切换当前提供商（写入 providers.toml active）
 nexus provider use openai-relay
 
-# 从 CC Switch / Claude 配置导入
+# 从 CC Switch / 外部配置导入
 nexus provider import-cc-switch
 nexus provider import-cc-switch --from %USERPROFILE%\.claude\settings.json
 nexus provider import-cc-switch --from export.json
@@ -51,9 +51,9 @@ nexus secrets set openai-relay sk-xxx
 
 ## 与 CC Switch 的关系
 
-[CC Switch](https://github.com/farion1231/cc-switch) 通过改写 Claude Code / Codex 等工具的配置实现切换。NexusIDE **不替代** CC Switch，但可：
+[CC Switch](https://github.com/farion1231/cc-switch) 用于在多款终端工具间切换模型配置。Nexus-Transe **不替代** CC Switch，但可：
 
-1. **导入** CC Switch 写入的 `~/.claude/settings.json`（`ANTHROPIC_BASE_URL` / `ANTHROPIC_AUTH_TOKEN`）
+1. **导入** CC Switch 写入的外部 `settings.json`（`ANTHROPIC_BASE_URL` / `ANTHROPIC_AUTH_TOKEN`）
 2. **导入** 导出的 JSON 配置（`providers` 数组）
 3. 使用相同的 **双协议** 模型，便于对照 CC Switch 里的选项
 
@@ -64,7 +64,7 @@ nexus secrets set openai-relay sk-xxx
 | 变量 | 说明 |
 |------|------|
 | `ANTHROPIC_API_KEY` / `ANTHROPIC_AUTH_TOKEN` | 原生协议密钥 |
-| `OPENAI_API_KEY` | OpenAI 兼容中转 |
+| `OPENAI_API_KEY` | Chat Completions 兼容中转 |
 | `NEXUS_API_BASE` | 覆盖默认 base URL（无 providers.toml 时） |
 | `NEXUS_DATA_DIR` | 数据目录（providers.toml 位置） |
 
