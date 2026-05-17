@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -Dwarnings
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Test nexus-core
+        run: cargo test -p nexus-core
+      - name: Test nexus-cli
+        run: cargo test -p nexus-cli
+      - name: Build CLI
+        run: cargo build -p nexus-cli --release
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - name: Install engine
+        working-directory: packages/nexus-engine
+        run: uv sync --extra dev
+      - name: Test engine
+        working-directory: packages/nexus-engine
+        run: uv run pytest -q
+
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+      - run: pnpm install
+      - name: Typecheck shared protocol types
+        working-directory: packages/shared/typescript
+        run: pnpm exec tsc --noEmit

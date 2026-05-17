@@ -1,0 +1,7 @@
+id = "example"
+name = "Example Plugin"
+version = "0.1.0"
+description = "Sample NexusIDE plugin"
+author = "NexusIDE"
+entry = "index.js"
+permissions = ["read_files"]

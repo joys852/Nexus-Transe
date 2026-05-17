@@ -1,0 +1,6 @@
+# uv 项目配置（顶层字段，不要用 [tool.uv]）
+# 文档: https://docs.astral.sh/uv/configuration/
+
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+python-install-mirror = "https://npmmirror.com/mirrors/python-build-standalone/"
+extra-index-url = ["https://mirrors.aliyun.com/pypi/simple/"]

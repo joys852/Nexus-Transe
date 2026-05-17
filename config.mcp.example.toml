@@ -1,0 +1,8 @@
+# MCP servers — copy to ~/.nexus/mcp.toml
+
+[[servers]]
+name = "filesystem"
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "."]
+env = {}
+enabled = false

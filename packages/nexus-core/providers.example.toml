@@ -1,0 +1,54 @@
+# LLM providers — copy to %APPDATA%\nexus-ide\providers.toml
+
+# 与 CC Switch / 中转面板一致：Anthropic Messages + 无尾斜杠 base_url
+active = "gpt-agent-glm"
+
+[[providers]]
+id = "gpt-agent-glm"
+name = "gpt-agent.cc (Anthropic Messages)"
+protocol = "anthropic_messages"
+base_url = "https://gpt-agent.cc"
+model = "glm-5.1"
+small_fast_model = "glm-5.1"
+# 二选一：环境变量名（推荐）或直接写 key（勿提交到 git）
+api_key_env = "GPT_AGENT_API_KEY"
+# api_key = "sk-your-key-here"
+proxy_hint = true
+
+[[providers]]
+id = "anthropic-official"
+name = "Anthropic Messages (原生)"
+protocol = "anthropic_messages"
+base_url = "https://api.anthropic.com"
+model = "claude-sonnet-4-20250514"
+api_key_env = "ANTHROPIC_API_KEY"
+proxy_hint = false
+
+[[providers]]
+id = "openai-relay"
+name = "OpenAI Chat Completions (三方中转)"
+protocol = "openai_chat_completions"
+base_url = "https://gpt-agent.cc/v1"
+model = "gpt-4o"
+api_key_env = "OPENAI_API_KEY"
+proxy_hint = true
+
+# DeepSeek / 国内中转示例（OpenAI 兼容）
+[[providers]]
+id = "deepseek"
+name = "DeepSeek (OpenAI 兼容)"
+protocol = "openai_chat_completions"
+base_url = "https://api.deepseek.com/v1"
+model = "deepseek-chat"
+api_key_env = "DEEPSEEK_API_KEY"
+proxy_hint = false
+
+# Ollama 本地
+[[providers]]
+id = "ollama"
+name = "Ollama 本地"
+protocol = "openai_chat_completions"
+base_url = "http://127.0.0.1:11434/v1"
+model = "llama3.2"
+api_key_env = "OLLAMA_API_KEY"
+proxy_hint = false

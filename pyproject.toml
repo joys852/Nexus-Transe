@@ -1,0 +1,9 @@
+[tool.uv.workspace]
+members = ["packages/nexus-engine"]
+
+[tool.uv]
+dev-dependencies = []
+# 国内镜像（与 uv.toml 一致；在子目录单独 uv sync 时也生效）
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+python-install-mirror = "https://npmmirror.com/mirrors/python-build-standalone/"
+extra-index-url = ["https://mirrors.aliyun.com/pypi/simple/"]

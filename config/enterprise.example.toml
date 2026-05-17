@@ -1,0 +1,26 @@
+# Enterprise deployment template — copy to %APPDATA%/nexus-ide/enterprise.toml
+
+[tenant]
+id = "acme-corp"
+display_name = "ACME Engineering"
+
+[auth]
+# OIDC / SAML placeholders (not wired — configure at reverse proxy or future release)
+sso_provider = "oidc"
+issuer_url = "https://login.example.com/"
+client_id = "nexus-ide"
+# client_secret via env: NEXUS_OIDC_CLIENT_SECRET
+
+[policy]
+default_tool_approval = "ask"   # ask | allow_writes | full_auto
+allow_network_tools = false
+sandbox_mode = "docker"           # local | docker
+require_signed_plugins = false
+
+[telemetry]
+sentry_dsn_env = "NEXUS_SENTRY_DSN"
+prometheus_scrape = "/metrics"
+
+[relay]
+engine_url = "https://nexus-engine.internal:8765"
+mcp_config_path = ".nexus/mcp.toml"

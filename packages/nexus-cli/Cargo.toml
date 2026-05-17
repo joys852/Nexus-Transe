@@ -1,0 +1,41 @@
+[package]
+name = "nexus-cli"
+description = "Nexus-Transe — AI terminal CLI (nexus / nx)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "nexus"
+path = "src/main.rs"
+
+[[bin]]
+name = "nx"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+chrono.workspace = true
+clap.workspace = true
+dirs.workspace = true
+nexus-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+uuid.workspace = true
+colored.workspace = true
+rustyline.workspace = true
+futures-util.workspace = true
+tokio-util.workspace = true
+crossterm = "0.28"
+reqwest.workspace = true
+toml.workspace = true
+indicatif.workspace = true
+ratatui.workspace = true
+walkdir = "2"
+base64.workspace = true
+
+[dev-dependencies]
+tempfile = "3"

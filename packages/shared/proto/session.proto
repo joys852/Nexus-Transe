@@ -1,0 +1,20 @@
+syntax = "proto3";
+package nexus.v1;
+
+// Reference schema — JSON HTTP API uses packages/shared/typescript
+
+message Session {
+  string id = 1;
+  optional string workspace_id = 2;
+  optional string title = 3;
+  string status = 4;
+  int64 revision = 5;
+  optional string model_id = 6;
+  string agent_profile = 7;
+}
+
+message SyncEvent {
+  string type = 1;
+  string payload_json = 2;
+  int64 event_id = 3;
+}

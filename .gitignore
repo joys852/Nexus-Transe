@@ -1,0 +1,32 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Node
+node_modules/
+dist/
+.pnpm-store/
+
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Nexus data
+.nexus/
+.nexus_history
+*.db
+*.db-*
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*

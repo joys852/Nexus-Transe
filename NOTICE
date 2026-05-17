@@ -1,0 +1,13 @@
+Nexus-Transe
+Copyright 2025 joys852
+
+This product includes software developed as part of the Nexus-Transe project
+(https://github.com/joys852/Nexus-Transe).
+
+The following components are included under their respective licenses:
+
+- Rust crates: see Cargo.lock and each crate's license (MIT/Apache-2.0/etc.)
+- Python packages: see packages/nexus-engine/uv.lock after `uv sync`
+
+Logo asset: assets/logo.png — project branding; all rights reserved by the
+copyright holder for trademark use; source code remains Apache-2.0.

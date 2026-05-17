@@ -1,0 +1,23 @@
+{
+  "name": "nexus-vscode",
+  "displayName": "NexusIDE",
+  "description": "Start Nexus engine and open CLI from VS Code",
+  "version": "0.1.0",
+  "publisher": "nexus-ide",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:nexus.openCli", "onCommand:nexus.startEngine"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nexus.openCli",
+        "title": "Nexus: Open CLI (nexus)"
+      },
+      {
+        "command": "nexus.startEngine",
+        "title": "Nexus: Start Engine (uv)"
+      }
+    ]
+  }
+}

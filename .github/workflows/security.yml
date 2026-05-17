@@ -1,0 +1,33 @@
+name: Security
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  push:
+    branches: [main]
+
+jobs:
+  rust-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo install cargo-audit --locked
+      - run: cargo audit || true
+
+  python-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: pip install pip-audit
+      - working-directory: packages/nexus-engine
+        run: pip-audit -r <(uv export --no-dev) || true
+
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Core tests (performance gate)
+        run: cargo test -p nexus-core --release -- --test-threads=1

@@ -1,0 +1,36 @@
+{
+  "plugins": [
+    {
+      "id": "code-review",
+      "name": "Code Review",
+      "version": "0.1.0",
+      "description": "Structured PR / diff review prompts and checklist skill.",
+      "author": "NexusIDE",
+      "permissions": ["read_files"]
+    },
+    {
+      "id": "rust-helper",
+      "name": "Rust Helper",
+      "version": "0.1.0",
+      "description": "Cargo, clippy, and Rust idioms assistant.",
+      "author": "NexusIDE",
+      "permissions": ["read_files", "run_shell"]
+    },
+    {
+      "id": "docs-writer",
+      "name": "Docs Writer",
+      "version": "0.1.0",
+      "description": "Generate and maintain API docs from source.",
+      "author": "NexusIDE",
+      "permissions": ["read_files", "write_files"]
+    },
+    {
+      "id": "test-runner",
+      "name": "Test Runner",
+      "version": "0.1.0",
+      "description": "Discover and run project tests with summarized output.",
+      "author": "NexusIDE",
+      "permissions": ["read_files", "run_shell"]
+    }
+  ]
+}

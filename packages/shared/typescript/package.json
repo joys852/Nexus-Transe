@@ -1,0 +1,14 @@
+{
+  "name": "@nexus/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/protocol.ts",
+  "types": "./src/protocol.ts",
+  "exports": {
+    ".": "./src/protocol.ts"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.0"
+  }
+}

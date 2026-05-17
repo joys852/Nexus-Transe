@@ -1,0 +1,6 @@
+# Quieter `cargo run` for day-to-day CLI use (hides "Compiling…" when nothing changed).
+[term]
+verbose = false
+
+[alias]
+nexus = "run -q -p nexus-cli --"

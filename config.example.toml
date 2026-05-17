@@ -1,0 +1,10 @@
+# NexusIDE — copy to %APPDATA%\nexus-ide\config.toml (Windows)
+# or ~/.config/nexus-ide/config.toml (Linux/macOS)
+# Or set NEXUS_CONFIG=/path/to/config.toml
+
+default_model = "claude-sonnet-4-20250514"
+engine_url = "http://127.0.0.1:8765"
+log_level = "info"
+
+# Provider profiles are in providers.toml (same directory).
+# Use: nexus provider list | use | import-cc-switch

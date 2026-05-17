@@ -1,0 +1,10 @@
+@echo off
+set NEXUS_ENGINE_DIR=__ENGINE_DIR__
+set _ENGINE_EXE=%NEXUS_ENGINE_DIR%\.venv\Scripts\nexus-engine.exe
+powershell -NoProfile -Command "try { (Invoke-WebRequest -Uri 'http://127.0.0.1:8765/health' -UseBasicParsing -TimeoutSec 1).StatusCode } catch { 0 }" | findstr /x 200 >nul || (
+  if exist "%_ENGINE_EXE%" (
+    start "Nexus Engine" /B "" "%_ENGINE_EXE%"
+    ping -n 4 127.0.0.1 >nul
+  )
+)
+"%~dp0nexus.exe" %*
